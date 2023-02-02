@@ -1,1 +1,141 @@
-# one-month-prep
+1)plus minus
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'plusMinus' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def plusMinus(arr):
+    # Write your code here
+    pcount,ncount,count=0,0,0
+    for i in range(n):
+        if arr[i]>0:
+            pcount+=1
+    print(pcount/n)
+    for i in range(n):
+        if arr[i]<0:
+            ncount+=1
+    print(ncount/n)
+    for i in range(n):
+        if arr[i]==0:
+            count+=1
+    print(count/n)
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
+
+
+2)Min max sum
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'miniMaxSum' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def miniMaxSum(arr):
+    # Write your code here
+    
+     x=arr.sort()
+     sum1=arr[0]+arr[1]+arr[2]+arr[3]
+     sum2=arr[1]+arr[2]+arr[3]+arr[4]
+     print(sum1 , sum2)
+     
+     
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+
+3)xOR Strings 2
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'miniMaxSum' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def miniMaxSum(arr):
+    # Write your code here
+    
+     x=arr.sort()
+     sum1=arr[0]+arr[1]+arr[2]+arr[3]
+     sum2=arr[1]+arr[2]+arr[3]+arr[4]
+     print(sum1 , sum2)
+     
+     
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+
+4)Pangrams
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'pangrams' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def pangrams(s):
+    # Write your code here
+    a=s.lower()
+    b=[]
+    for i in a:
+        if i not in b and i!=" ":
+            b.append(i)
+    if len(b)==26:
+            return "pangram"
+    else:
+        return "not pangram"
+            
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = pangrams(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
